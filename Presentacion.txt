@@ -5,6 +5,7 @@ Fabian Andres Perdomo Laguna CC. 1053840844 correo: faperdomola@gmail.com
 Stephany Johana Argoty Solarte CC. 1061771176 corre: ejargoty@unicauca.edu.co
 Estiven Alejandro Bedoya Valencia CC. 1128457223 correo: esti-ven93@hotmail.com
 
+
 Descripcion del proceso:
 1. Se crea el grupo y por medio de lluvia de ideas se le da el nombre de TRender.
 2. Se asignan los roles para la primer semana de trabajo.
