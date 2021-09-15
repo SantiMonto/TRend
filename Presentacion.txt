@@ -7,7 +7,7 @@ Fabian Andres Perdomo Laguna CC. 1053840844 correo: faperdomola@gmail.com
 
 Descripcion del proceso:
 1. Se crea el grupo y por medio de lluvia de ideas se le da el nombre de TRender.
-2. Se asignana los roles para la primer semana de trabajo.
+2. Se asignan los roles para la primer semana de trabajo.
 3. Se crea un repositorio en Github y se añade a todos los integrantes del grupo.
 4. Cada integrante debe implementar Git y Github para poder modificar los archivos desde su computador, tareas en Trello. 
 5. Cada integrante modifica el archivo de texto, añadiendo su nombre, cedula y correo.
