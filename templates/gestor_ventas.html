@@ -1,0 +1,23 @@
+{% extends 'index.html' %}
+{% block content %}
+<style>
+    table, th, td {
+        border: 1px solid black;
+        border-collapse: collapse;
+    }
+    th, td {
+        padding: 8px;
+    }
+</style>
+
+    <h1>Modulo de Gestión de Ventas</h1>
+<table>
+  <tr>
+    <th>Producto</th>
+    <th>Cantidad</th>
+    <th>Precio de venta</th>
+	<th>Total transacción</th>
+  </tr>
+</table>
+
+{% endblock %}
