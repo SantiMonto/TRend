@@ -185,7 +185,98 @@
             <!-- Small boxes (Stat box) -->
             <h2>Informaciòn</h2>
           
-          
+            <div class="container">
+                <h1>Gestor de Cursos</h1>
+                <table class="table table-striped">
+                    <thead class="table-dark">
+                        <tr>
+                            <th>ID</th>
+                            <th>Nombre del curso</th>
+                            <th>Area</th>
+                            <th>Instructor</th>
+                            <th>Precio</th>
+                            <th>Estado</th>
+                            <th>Accion</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th class="align-middle">1</th>
+                            <td class="align-middle">Introducción a Java</td>
+                            <td class="align-middle">OOP</td>
+                            <td class="align-middle">Liliana</td>
+                            <td class="align-middle">$50.000</td>
+                            <td class="align-middle">
+                                <span class="active_course">Activo</span>
+                            </td>
+                            <td>
+                                <button type="button" class="btn btn-danger"> 
+                                    <i class="fas fa-trash-alt"></i> Eliminar</button>
+                                <button type="button" class="btn btn-primary">
+                                    <i class="fas fa-pencil-alt"></i> Editar</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th class="align-middle">2</th>
+                            <td class="align-middle">React Native</td>
+                            <td class="align-middle">Móvil</td>
+                            <td class="align-middle">Carlos Santana</td>
+                            <td class="align-middle">$35.000</td>
+                            <td class="align-middle">
+                                <span class="cancelled_course">Cancelado</span>
+                            </td>
+                            <td>
+                                <button type="button" class="btn btn-danger">
+                                    <i class="fas fa-trash-alt"></i> Eliminar</button>
+                                <button type="button" class="btn btn-primary">
+                                    <i class="fas fa-pencil-alt"></i> Editar</button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        
+            <div class="container">
+                <a href=""class="btn btn-dark">Agregar Curso</a>
+            </div>
+            <br>
+            <form>
+                <fieldset disabled>
+                <div class="mb-3 col-4 container">
+                    <label for="disabledTextInput" class="form-label">Identificador del Curso</label>
+                    <input type="text" id="ID" class="form-control" placeholder="ID">  
+                </div>
+                </fieldset>
+                <div class="mb-3 col-4 container">
+                    <label for="TextInput" class="form-label">Nombre del Curso</label>
+                    <input type="text" id="Name_Course" class="form-control">
+                </div>
+                <div class="mb-3 col-4 container">
+                    <label for="Select" class="form-label">Area</label>
+                    <select id="Area" class="form-select">
+                      <option>OOP</option>
+                      <option>Móvil</option>
+                    </select>
+                </div>
+                <div class="mb-3 col-4 container">
+                    <label for="TextInput" class="form-label">Instructor</label>
+                    <input type="text" id="Instructor" class="form-control">
+                </div>
+                <div class="mb-3 col-4 container">
+                    <label for="TextInput" class="form-label">Precio</label>
+                    <input type="text" id="Precio" class="form-control">
+                </div>
+                <div class="mb-3 col-4 container">
+                    <label for="Select" class="form-label">Estado</label>
+                    <select id="Estado" class="form-select">
+                      <option>Activo</option>
+                      <option>Cancelado</option>
+                    </select>
+                </div>
+                <div class="col-4 container">
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                </div>
+            </form>
 
 
             <!-- /.row (main row) -->
