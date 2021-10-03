@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agregar Curso</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+    <link rel="stylesheet" href="../../static/css/all.css">
+	<link rel="stylesheet" href="../../static/css/cursos_style.css">
+</head>
+<body>
+
+    <form>
+        <fieldset disabled>
+        <div class="mb-3 col-4 container">
+            <label for="disabledTextInput" class="form-label">Identificador del Curso</label>
+            <input type="text" id="ID" class="form-control" placeholder="ID">  
+        </div>
+        </fieldset>
+        <div class="mb-3 col-4 container">
+            <label for="TextInput" class="form-label">Nombre del Curso</label>
+            <input type="text" id="Name_Course" class="form-control">
+        </div>
+        <div class="mb-3 col-4 container">
+            <label for="Select" class="form-label">Area</label>
+            <select id="Area" class="form-select">
+              <option>OOP</option>
+              <option>Móvil</option>
+            </select>
+        </div>
+        <div class="mb-3 col-4 container">
+            <label for="TextInput" class="form-label">Instructor</label>
+            <input type="text" id="Instructor" class="form-control">
+        </div>
+        <div class="mb-3 col-4 container">
+            <label for="TextInput" class="form-label">Precio</label>
+            <input type="text" id="Precio" class="form-control">
+        </div>
+        <div class="mb-3 col-4 container">
+            <label for="Select" class="form-label">Estado</label>
+            <select id="Estado" class="form-select">
+              <option>Activo</option>
+              <option>Cancelado</option>
+            </select>
+        </div>
+        <div class="col-4 container">
+            <button type="submit" class="btn btn-dark">Enviar</button>
+            <button type="submit" class="btn btn-dark">Cancelar</button>
+        </div>
+    </form>
+    
+</body>
+</html>

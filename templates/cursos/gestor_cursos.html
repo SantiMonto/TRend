@@ -132,7 +132,7 @@
                 
               </li>
               <li class="nav-item">
-                <a href="/templates/usuarios/agregar_usuario.html" class="nav-link">
+                <a href="/templates/usuarios/gest_usuarios_roles.html" class="nav-link">
                   <i class="nav-icon fas fa-edit"></i>
                   <p>
                     Usuarios
@@ -166,7 +166,7 @@
           <div class="container-fluid">
             <div class="row mb-2">
               <div class="col-sm-6">
-                <h1 class="m-0">BIenvenidos</h1>
+                <h1 class="m-0">Bienvenidos</h1>
               </div><!-- /.col -->
               <div class="col-sm-6">
                 <ol class="breadcrumb float-sm-right">
@@ -183,10 +183,22 @@
         <section class="content">
           <div class="container-fluid">
             <!-- Small boxes (Stat box) -->
-            <h2>Informaciòn</h2>
+            <h2>Información</h2>
           
             <div class="container">
                 <h1>Gestor de Cursos</h1>
+
+                <div class="row justify-content-between">
+                  <div class="col-6">
+                    <input type="text" class="form-control" placeholder="Buscar por palabra clave">
+                  </div>
+                  <div class="col-2">
+                    <button onclick="location.href='/templates/cursos/agregar_cursos.html'" class="btn btn-dark" type="button">
+                      Agregar Curso</button>
+                  </div>
+                </div>
+                <br>
+                
                 <table class="table table-striped">
                     <thead class="table-dark">
                         <tr>
@@ -235,49 +247,6 @@
                     </tbody>
                 </table>
             </div>
-        
-            <div class="container">
-                <a href=""class="btn btn-dark">Agregar Curso</a>
-            </div>
-            <br>
-            <form>
-                <fieldset disabled>
-                <div class="mb-3 col-4 container">
-                    <label for="disabledTextInput" class="form-label">Identificador del Curso</label>
-                    <input type="text" id="ID" class="form-control" placeholder="ID">  
-                </div>
-                </fieldset>
-                <div class="mb-3 col-4 container">
-                    <label for="TextInput" class="form-label">Nombre del Curso</label>
-                    <input type="text" id="Name_Course" class="form-control">
-                </div>
-                <div class="mb-3 col-4 container">
-                    <label for="Select" class="form-label">Area</label>
-                    <select id="Area" class="form-select">
-                      <option>OOP</option>
-                      <option>Móvil</option>
-                    </select>
-                </div>
-                <div class="mb-3 col-4 container">
-                    <label for="TextInput" class="form-label">Instructor</label>
-                    <input type="text" id="Instructor" class="form-control">
-                </div>
-                <div class="mb-3 col-4 container">
-                    <label for="TextInput" class="form-label">Precio</label>
-                    <input type="text" id="Precio" class="form-control">
-                </div>
-                <div class="mb-3 col-4 container">
-                    <label for="Select" class="form-label">Estado</label>
-                    <select id="Estado" class="form-select">
-                      <option>Activo</option>
-                      <option>Cancelado</option>
-                    </select>
-                </div>
-                <div class="col-4 container">
-                    <button type="submit" class="btn btn-primary">Submit</button>
-                </div>
-            </form>
-
 
             <!-- /.row (main row) -->
           </div><!-- /.container-fluid -->
