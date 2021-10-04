@@ -4,11 +4,11 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gestor Cursos</title>
-    <!-- CSS only -->
+    <title>Gestor Ventas</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
     <link rel="stylesheet" href="../../static/css/all.css">
-	<link rel="stylesheet" href="../../static/css/cursos_style.css">
+	<link rel="stylesheet" href="../../static/css/ventas_style.css">
+
 <!-- inicio -->
 <title>TRender</title>
 <!-- Google Font: Source Sans Pro -->
@@ -33,8 +33,8 @@
 <!-- summernote -->
 <link rel="stylesheet" href="plugins/summernote/summernote-bs4.min.css">
 <!-- fin -->
-
 </head>
+
 <body>
     <div class="wrapper">
 
@@ -122,7 +122,7 @@
                 </a>                 
               </li>
               <li class="nav-item">
-                <a href="/templates/vendedor/gestor-vendedor.html" class="nav-link">
+                <a href="/templates/ventas/gestor_ventas.html" class="nav-link">
                   <i class="nav-icon fas fa-tree"></i>
                   <p>
                     Venta de cursos
@@ -178,15 +178,77 @@
           </div><!-- /.container-fluid -->
         </div>
         <!-- /.content-header -->
-    
-        <!-- Main content -->
-        <section class="content">
-          <div class="container-fluid">
-            <!-- Small boxes (Stat box) -->
-            <h2>Información</h2>
-          
-          
 
+        <section class="content">
+            <div class="container-fluid">
+              <!-- Small boxes (Stat box) -->
+              <h2>Información</h2>
+            
+              <div class="container">
+                  <h1>Gestor de Ventas</h1>
+  
+                  <div class="row justify-content-between">
+                    <div class="col-6">
+                      <input type="text" class="form-control" placeholder="Buscar por ID Venta, Nombre Cliente o C.C. Cliente">
+                    </div>
+                    <div class="col-2">
+                      <button onclick="location.href='/templates/ventas/registrar_venta.html'" class="btn btn-dark" type="button">
+                        Registrar Venta</button>
+                    </div>
+                  </div>
+                  <br>
+
+                  <table class="table table-striped">
+                    <thead class="table-dark">
+                        <tr>
+                            <th>ID Venta</th>
+                            <th>Nombre del cliente</th>
+                            <th>C.C. Cliente</th>
+                            <th>Nombre del curso</th>
+                            <th>Area</th>
+                            <th>Precio de Venta</th>
+                            <th>Estado</th>
+                            <th>Accion</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th class="align-middle">1001</th>
+                            <td class="align-middle">Carlos Giraldo</td>
+                            <td class="align-middle">1024457966</td>
+                            <td class="align-middle">Introducción a Java</td>
+                            <td class="align-middle">OOP</td>
+                            <td class="align-middle">$50.000</td>
+                            <td class="align-middle">
+                                <span class="finished_sell">Procesada</span>
+                            </td>
+                            <td>
+                                <button type="button" class="btn btn-danger"> 
+                                    <i class="fas fa-trash-alt"></i> Eliminar</button>
+                                <button onclick="location.href='/templates/ventas/editar_venta.html'" type="button" class="btn btn-primary">
+                                    <i class="fas fa-pencil-alt"></i> Editar</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th class="align-middle">1002</th>
+                            <td class="align-middle">Silvia Castro</td>
+                            <td class="align-middle">1547924236</td>
+                            <td class="align-middle">React Native</td>
+                            <td class="align-middle">Móvil</td>
+                            <td class="align-middle">$35.000</td>
+                            <td class="align-middle">
+                                <span class="InProcess_sell">Procesando</span>
+                            </td>
+                            <td>
+                                <button type="button" class="btn btn-danger">
+                                    <i class="fas fa-trash-alt"></i> Eliminar</button>
+                                <button type="button" class="btn btn-primary">
+                                    <i class="fas fa-pencil-alt"></i> Editar</button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                </div>
 
             <!-- /.row (main row) -->
           </div><!-- /.container-fluid -->
@@ -207,5 +269,6 @@
       </aside>
       <!-- /.control-sidebar -->
     </div> 
+    
 </body>
 </html>

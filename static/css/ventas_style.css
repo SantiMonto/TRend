@@ -1,0 +1,13 @@
+.finished_sell{
+    background-color: rgb(7, 177, 7); 
+    padding: 0.3em; 
+    border-radius: 0.2em; 
+    color: white;
+}
+
+.InProcess_sell{
+    background-color: rgba(175, 109, 10, 0.719); 
+    padding: 0.3em; 
+    border-radius: 0.2em; 
+    color: white;
+}

@@ -4,34 +4,68 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Document | Login</title>
 
-    <!--Estilo CSS-->
-    <link rel="stylesheet" href="estilo-login.css">
-
+    <!-- Google Font: Source Sans Pro -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="../../plugins/fontawesome-free/css/all.min.css">
+  <!-- icheck bootstrap -->
+  <link rel="stylesheet" href="../../plugins/icheck-bootstrap/icheck-bootstrap.min.css">
+  <!-- Theme style -->
+  <link rel="stylesheet" href="../../dist/css/adminlte.min.css">
 </head>
 
 <h1>LOGIN</h1>
 
-<body>
+
     <!--Con servidor
     <form method="POST" action=""></form>-->
 
-    <fieldset>
-        <legend>LOGIN</legend>
-        <label for="name">Nombre: </label>
-        <input type="text" id="name" name="nombre">    
-        
-        <br>
-
-        <label for="password">Password: </label>
-        <input type="password" id="password" name="password">
+    <div class="login">
+        <div class="login-card-body">
+          <p class="mensaje">Iniciar sesión</p>
     
-    </fieldset>  
+          <form action="../../index.html" method="post">
+            <div class="input-group">
+              <input type="email" class="form-control" placeholder="Email">
+              <div class="input-group-append">
+                <div class="input-group-text">
+                  <span class="fas fa-envelope"></span>
+                </div>
+              </div>
+            </div>
+            <div class="input-group">
+              <input type="password" class="form-control" placeholder="Password">
+              <div class="input-group-append">
+                <div class="input-group-text">
+                  <span class="fas fa-lock"></span>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-8">
+                <div class="icheck-primary">
+                  <input type="checkbox" id="remember">
+                  <label for="remember">
+                    Recordar nombre de usuario
+                  </label>
+                </div>
+              </div>
+              <!-- /.col -->
+              <div class="col-4">
+                <button onclick="location.href='index.html'" type="submit" class="btn btn-primary btn-block">ACCEDER</button>
+              </div>
+              <!-- /.col -->
+            </div>
+          </form>
 
-    <button>Enviar</button>
+          <div class="social-author">
+            <a href="#" class="btn btn-block btn-primary">
+              <i class="fab fa-google-plus mr-2"></i> Ingresar con Google
+            </a>
+          </div>          
+        </div>
+    </div>
 
-
-    
-</body>
 </html>
