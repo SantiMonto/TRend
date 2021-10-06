@@ -11,3 +11,9 @@
 *, *:before,*:after{
     box-sizing: border-box;
 }
+.finished_sell{
+    background-color: rgb(7, 177, 7); 
+    padding: 0.3em; 
+    border-radius: 0.2em; 
+    color: white;
+}

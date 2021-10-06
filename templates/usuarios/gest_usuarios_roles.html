@@ -7,6 +7,7 @@
 	<!-- CSS only -->
 	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
 	<link rel="stylesheet" href="../../static/css/all.css">
+  <link rel="stylesheet" href="../../static/css/estilo_usuarios-roles.css">
 	<title>Gestion de usuarios y roles</title>
 <!-- inicio -->
 <title>TRender</title>
@@ -188,48 +189,39 @@
     <br>
 
 	<div class="container">
-	<div class="row">
-		<h5 class="card-header text-align: left" style="width: 70rem;"> <i class="fas fa-1x fa-address-card"></i>  MODULO DE GESTION DE USUARIOS Y ROLES</h5>
-			<div class="card" style="width: 25rem;">
-				<div class="card-body">
-					<p class="card-text">En este modulo puede ver la tabla de usuarios y sus respectivos roles, al igual que agregar o editar dicha tabla. <br> 
-						¿Que desea hacer?</p>
-						<br>
-					<a href="agregar_usuario.html"class="btn btn-dark">AGREGAR USUARIO</a>
-					<a href="editar_usuario.html"class="btn btn-dark">EDITAR USUARIO</a>
-				</div>
-			</div>
-			<div class="card" style="width: 34rem; padding: 20 20">
-				<table class="table table-bordered table-hover table-striped"style="width: 32rem;">
-					<thead class="table-dark text-center">
+    <h1>Gestor de Usuarios y Roles</h1>
+				<table class="table table-striped">
+					<thead class="table-dark">
 						<tr>
-						<th scope="col">ID USUARIO</th>
-						<th scope="col">NOMBRE</th>
-						<th scope="col">ROL</th>
-						<th scope="col">ESTADO</th>
+						<th>ID Usuario</th>
+						<th>Nombre</th>
+						<th>Rol</th>
+						<th>Estado</th>
+            <th>Accion</th>
 						</tr>
 					</thead>
 					<tbody>
 						<tr>
-							<td class="text-center">1</td>
-							<td>Santiago Montoya P.</td>
-							<td>Administrador</td>
-							<td>Activo</td>
+							<th class="align-middle">1</th>
+							<td class="align-middle">Santiago Montoya P.</td>
+							<td class="align-middle">Administrador</td>
+							<td class="align-middle">
+                <span class="finished_sell">Activo</span> 
+              </td>
 						</tr>
 						<tr>
-							<td class="text-center">2</td>
-							<td>Johana Argoty</td>
-							<td>Vendedor</td>
-							<td>Activo</td>
+							<th class="align-middle">2</td>
+							<td class="align-middle">Johana Argoty</td>
+							<td class="align-middle">Vendedor</td>
+							<td class="align-middle">Activo</td>
 						</tr>
 						<tr>
-							<td class="text-center">3</td>
-							<td>Estiven Bedoya</td>
-							<td>Estudiante</td>
-							<td>Inactivo</td>
+							<th class="align-middle">3</th>
+							<td class="align-middle">Estiven Bedoya</td>
+							<td class="align-middle">Estudiante</td>
+							<td class="align-middle">Inactivo</td>
 						</tr>
 					</tbody>
-
 				</table>
 			</div>
 	</div>
