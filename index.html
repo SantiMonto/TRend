@@ -4,22 +4,37 @@
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Gestor Ventas</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+  <meta name="viewport" content="width=
+    , initial-scale=1.0">
   <link rel="stylesheet" href="../../static/css/all.css">
-  <link rel="stylesheet" href="../../static/css/ventas_style.css">
-
-
-  <!-- inicio -->
   <title>TRender</title>
+  <!-- Google Font: Source Sans Pro -->
+  <!-- Google Font: Source Sans Pro -->
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="plugins/fontawesome-free/css/all.min.css">
+  <!-- Ionicons -->
+  <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+  <!-- Tempusdominus Bootstrap 4 -->
+  <link rel="stylesheet" href="plugins/tempusdominus-bootstrap-4/css/tempusdominus-bootstrap-4.min.css">
+  <!-- iCheck -->
+  <link rel="stylesheet" href="plugins/icheck-bootstrap/icheck-bootstrap.min.css">
+  <!-- JQVMap -->
+  <link rel="stylesheet" href="plugins/jqvmap/jqvmap.min.css">
+  <!-- Theme style -->
   <link rel="stylesheet" href="/dist/css/adminlte.min.css">
-
+  <!-- overlayScrollbars -->
+  <link rel="stylesheet" href="plugins/overlayScrollbars/css/OverlayScrollbars.min.css">
+  <!-- Daterange picker -->
+  <link rel="stylesheet" href="plugins/daterangepicker/daterangepicker.css">
+  <!-- summernote -->
+  <link rel="stylesheet" href="plugins/summernote/summernote-bs4.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootswatch@4.5.2/dist/flatly/bootstrap.min.css">
 </head>
 
 <body>
-  <!-- <div class="loader-page"></div> -->
+
   <div class="wrapper">
 
     <!-- Preloader
@@ -56,12 +71,9 @@
     <!-- /.navbar -->
 
     <!-- Main Sidebar Container -->
-
-
-
     <aside class="main-sidebar sidebar-dark-primary elevation-4">
       <!-- Brand Logo -->
-      <a href="/templates/index.html" class="brand-link">
+      <a href="index.html" class="brand-link">
         <img src="/dist/img/AdminLTELogo.png" alt="AdminLTE Logo" class="brand-image img-circle elevation-3"
           style="opacity: .8">
         <span class="brand-text font-weight-light">Trender</span>
@@ -78,10 +90,24 @@
             <a href="#" class="d-block">USUARIO TAL</a>
           </div>
         </div>
+
+        <!-- SidebarSearch Form -->
+        <!-- <div class="form-inline">
+              <div class="input-group" data-widget="sidebar-search">
+                <input class="form-control form-control-sidebar" type="search" placeholder="Search" aria-label="Search">
+                <div class="input-group-append">
+                  <button class="btn btn-sidebar">
+                    <i class="fas fa-search fa-fw"></i>
+                  </button>
+                </div>
+              </div>
+            </div> -->
+
+        <!-- Sidebar Menu -->
         <nav class="mt-2">
           <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
             <!-- Add icons to the links using the .nav-icon class
-                   with font-awesome or any other icon font library -->
+                       with font-awesome or any other icon font library -->
 
             <li class="nav-item">
               <a href="/templates/cursos/gestor_cursos.html" class="nav-link">
@@ -137,7 +163,7 @@
         <div class="container-fluid">
           <div class="row mb-2">
             <div class="col-sm-6">
-              <h1 class="m-0"></h1>
+              <h1 class="m-0">Bienvenidos</h1>
             </div><!-- /.col -->
             <div class="col-sm-6">
               <ol class="breadcrumb float-sm-right">
@@ -150,45 +176,24 @@
       </div>
       <!-- /.content-header -->
 
-      <section>
+      <!-- Main content -->
+      <section class="content">
         <div class="container-fluid">
-          <div class="container">
-            <form id='registrar-ventas'>
-              <div class=" card" style="width: 101rem;left: -15rem; top:-1rem;">
-                <h1 class="card-header text-align: right"> <i class="fas fa-cart-plus"></i>
-                  Ventas
-                  <button type="button" class=" text-center btn btn-success btn-rounded btn-sm my-0" value="Agregar"
-                    onclick="location.href='/templates/ventas/registrar_venta.html'"
-                    onmouseover="this.style.cursor='hand'" style="font-size: 50%">
-                    Registrar Venta
-                  </button>
-                </h1>
-                <div class="card-body text-center ">
-                  <table id='TablaVentas' class="table table-striped" style="top:10rem;">
-                    <thead class="table-dark text-center">
-                      <tr>
-                        <th>Fecha</th>
-                        <th># Venta</th>
-                        <th>Cliente</th>
-                        <th>Identificación</th>
-                        <th>Cursos</th>
-                        <th>Total</th>
-                        <th>Vendedor</th>
-                        <th>Estado</th>
-                        <th>Accion</th>
-                      </tr>
-                    </thead>
-                    <tbody>
+          <!-- Small boxes (Stat box) -->
+          <h2>Información</h2>
 
-                    </tbody>
-                  </table>
-                </div>
-            </form>
-          </div>
-        </div>
+          la plataforma TRENDER ofrece los servicios de venta de cursos Online,
+          en la parte izquiera puede observar la lista de productos a escoger
+
+
+
+
+          <!-- /.row (main row) -->
+        </div><!-- /.container-fluid -->
       </section>
+      <!-- /.content -->
     </div>
-
+    <!-- /.content-wrapper -->
     <footer class="main-footer">
 
       <div class="float-right d-none d-sm-inline-block">
@@ -202,17 +207,41 @@
     </aside>
     <!-- /.control-sidebar -->
   </div>
-  </div>
-  </form>
-  <script src="https://www.gstatic.com/firebasejs/9.1.1/firebase-app-compat.js"></script>
-  <script src="https://www.gstatic.com/firebasejs/9.1.1/firebase-auth-compat.js"></script>
-  <script src="https://www.gstatic.com/firebasejs/9.1.1/firebase-firestore-compat.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.min.js"></script>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
-  <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 
-  <script src="gestor_ventas.js"></script>
-  <script src="verOrder.js"></script>
+  <script src="plugins/jquery/jquery.min.js"></script>
+  <!-- jQuery UI 1.11.4 -->
+  <script src="plugins/jquery-ui/jquery-ui.min.js"></script>
+  <!-- Resolve conflict in jQuery UI tooltip with Bootstrap tooltip -->
+  <script>
+    $.widget.bridge('uibutton', $.ui.button)
+  </script>
+  <!-- Bootstrap 4 -->
+  <script src="plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <!-- ChartJS -->
+  <script src="plugins/chart.js/Chart.min.js"></script>
+  <!-- Sparkline -->
+  <script src="plugins/sparklines/sparkline.js"></script>
+  <!-- JQVMap -->
+  <script src="plugins/jqvmap/jquery.vmap.min.js"></script>
+  <script src="plugins/jqvmap/maps/jquery.vmap.usa.js"></script>
+  <!-- jQuery Knob Chart -->
+  <script src="plugins/jquery-knob/jquery.knob.min.js"></script>
+  <!-- daterangepicker -->
+  <script src="plugins/moment/moment.min.js"></script>
+  <script src="plugins/daterangepicker/daterangepicker.js"></script>
+  <!-- Tempusdominus Bootstrap 4 -->
+  <script src="plugins/tempusdominus-bootstrap-4/js/tempusdominus-bootstrap-4.min.js"></script>
+  <!-- Summernote -->
+  <script src="plugins/summernote/summernote-bs4.min.js"></script>
+  <!-- overlayScrollbars -->
+  <script src="plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js"></script>
+  <!-- AdminLTE App -->
+  <script src="/dist/js/adminlte.js"></script>
+  <!-- AdminLTE for demo purposes -->
+  <script src="/dist/js/demo.js"></script>
+  <!-- AdminLTE dashboard demo (This is only for demo purposes) -->
+  <script src="/dist/js/pages/dashboard.js"></script>
+
 </body>
 
 </html>
