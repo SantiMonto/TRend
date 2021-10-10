@@ -6,10 +6,13 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Gestor Ventas</title>
+  <link type='text/css' rel='stylesheet'
+    href='https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css'>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
   <link rel="stylesheet" href="../../static/css/all.css">
   <link rel="stylesheet" href="../../static/css/ventas_style.css">
+  <link rel="import" href="verOrder.html">
 
 
   <!-- inicio -->
@@ -19,7 +22,8 @@
 </head>
 
 <body>
-  <!-- <div class="loader-page"></div> -->
+
+  <div class="loader-page"></div>
   <div class="wrapper">
 
     <!-- Preloader
@@ -163,6 +167,7 @@
                     Registrar Venta
                   </button>
                 </h1>
+
                 <div class="card-body text-center ">
                   <table id='TablaVentas' class="table table-striped" style="top:10rem;">
                     <thead class="table-dark text-center">
@@ -179,7 +184,6 @@
                       </tr>
                     </thead>
                     <tbody>
-
                     </tbody>
                   </table>
                 </div>
@@ -188,14 +192,11 @@
         </div>
       </section>
     </div>
-
     <footer class="main-footer">
-
       <div class="float-right d-none d-sm-inline-block">
         <b>Version</b> 1.0.0
       </div>
     </footer>
-
     <!-- Control Sidebar -->
     <aside class="control-sidebar control-sidebar-dark">
       <!-- Control sidebar content goes here -->
@@ -203,16 +204,127 @@
     <!-- /.control-sidebar -->
   </div>
   </div>
-  </form>
-  <script src="https://www.gstatic.com/firebasejs/9.1.1/firebase-app-compat.js"></script>
-  <script src="https://www.gstatic.com/firebasejs/9.1.1/firebase-auth-compat.js"></script>
-  <script src="https://www.gstatic.com/firebasejs/9.1.1/firebase-firestore-compat.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.min.js"></script>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
-  <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+  <!-- The modal ver detalles de las ordenes -->
+  <div class="modal fade" id="verOrden" tabindex="-1" role="dialog" aria-labelledby="modalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-xl" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h4 class="modal-title" id="modalLabel"></h4>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <h5 id='FechaOrden' class="card-title"></h5>
+          <br>
+          <h5 id='NombreClienteOrden' class="card-title"></h5>
+          <br>
+          <h5 id='idClienteOrden' class="card-title"></h5>
+          <br>
+          <h5 id='VenderdorOrdenV' class="card-title"></h5>
+          <br>
+          <div class="input-group" style="width: 210px;left: 56rem;">
+            <span class="input-group-text">TOTAL</span>
+            <input id="TotalOrdenV" type="text" class="form-control text-center" disabled>
+          </div>
+          <table id="tablaCrusosOrden" class="table table-hover table-striped">
+          </table>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- End the modal -->
 
-  <script src="gestor_ventas.js"></script>
-  <script src="verOrder.js"></script>
+  <!-- The modal editar ordenes -->
+  
+  <div class="modal fade" id="EditarOrden" tabindex="-1" role="dialog" aria-labelledby="modalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-xl" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h4 class="modal-title" id="modalLabel"><i class="fas fa-cart-plus"></i> Editar Venta </h4>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <div class="container">
+            <form id='registrar-ventas'>
+              <div class=" card">
+                <div>
+                  <h5 class="card-header text-align: right">
+
+                    <button type="button" class=" text-center btn btn-success btn-rounded btn-sm my-0" value="Agregar"
+                      onclick=AgregarLinea(this) onmouseover="this.style.cursor='hand'">
+                      Agregar
+                    </button>
+                  </h5>
+                  <div class="row">
+
+                    <!-- Poner el numero de la orden -->
+                    <div class="card text-white bg-dark  mb-4" style="max-width: 146px; left: 1.7rem; top:1rem">
+                      <div id="NumeroVentaEditar" class="card-header"></div>
+                    </div>
+                    <!-- fin del codigo -->
+
+                    <!-- Input para el nombre del cliente -->
+                    <div class="col-lg-3 col-sm-1">
+                      <div class="form-floating mb-1" style="left: 2rem; top:1rem">
+                        <input class="form-control" id="NombreClienteEditar" type="text" placeholder="Nombre cliente"
+                          autofocus>
+                        <label for="NombreClienteEditar">Nombre del Cliente</label>
+                      </div>
+                    </div>
+                    <!-- fin del codigo -->
+
+                    <!-- Este es el input Identicacion del Cliente -->
+                    <div class="col-lg-3 col-sm-1">
+                      <div class="form-floating mb-1" style="left: 2rem; top:1rem">
+                        <input class="form-control" id="IdentiClienteEditar" type="text"
+                          placeholder="Identicacion del Cliente">
+                        <label for="IdentiClienteEditar">Identificación del Cliente</label>
+                      </div>
+                    </div>
+                    <!-- fin del codigo -->
+
+                    <!-- Este es el input total de la orden -->
+                    <div class="col-lg-3 col-sm-1">
+                      <div class="form-floating mb-1" style="left: 2rem; top:1rem;">
+                        <input class="form-control" id="TotalEditarVenta" type="text" disabled value="$0"
+                          placeholder="Total" style="font-size: 200%">
+                        <label for="TotalEditarVenta">Total</label>
+                      </div>
+                    </div>
+                    <!-- fin del codigo -->
+
+                  </div>
+                </div>
+                <div class="card-body text-center ">
+                  <table id="tablaEditarVentas" class="table table-hover table-striped">
+                  </table>
+                </div>
+              </div>
+            </form>
+            <div class="modal-footer">
+              <button type='submit' class="btn btn-secondary"> Confirmar</button>
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- End the modal -->
+
+    </form>
+    <script src="https://www.gstatic.com/firebasejs/9.1.1/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.1.1/firebase-auth-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.1.1/firebase-firestore-compat.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script src="gestor_ventas.js"></script>
 </body>
 
 </html>

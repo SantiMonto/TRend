@@ -29,7 +29,7 @@ const firebaseConfig = {
 firebase.initializeApp(firebaseConfig);
 const db = firebase.firestore();
 
-
+// esta funcion carga los selects de cursos y areas 
 async function CargarSelect(idSelector, baseDatos) {
   const getDatos = () => db.collection(baseDatos).get();
   var selector = document.getElementById(idSelector);
@@ -116,7 +116,7 @@ async function AgregarLinea() {
 }
 
 
-// esat fucion pone el busca el precio de acuerdo con el curso seleccionado
+// esta funcion busca el precio de acuerdo con el curso seleccionado
 async function ponerPrecio(val) {
   var idVentas = val.id
   idVentas = idVentas.substring(idVentas.indexOf('V') + 1, idVentas.length);
