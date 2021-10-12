@@ -11,44 +11,47 @@
 </head>
 <body>
 
-    <form>
-        <fieldset disabled>
+    <script src="https://www.gstatic.com/firebasejs/9.1.1/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.1.1/firebase-firestore-compat.js"></script>
+
+    <form id="add_curso" action="redirect()" method="get">
         <div class="mb-3 col-4 container">
-            <label for="disabledTextInput" class="form-label">Identificador del Curso</label>
-            <input type="text" id="ID" class="form-control" placeholder="ID">  
+            <label for="TextInput" class="form-label">Identificador del Curso</label>
+            <input type="text" name="ID" class="form-control">  
         </div>
-        </fieldset>
         <div class="mb-3 col-4 container">
             <label for="TextInput" class="form-label">Nombre del Curso</label>
-            <input type="text" id="Name_Course" class="form-control">
+            <input type="text" name="Name_Course" class="form-control">
         </div>
         <div class="mb-3 col-4 container">
             <label for="Select" class="form-label">Area</label>
-            <select id="Area" class="form-select">
+            <select name="Area" class="form-select">
               <option>OOP</option>
               <option>Móvil</option>
             </select>
         </div>
         <div class="mb-3 col-4 container">
             <label for="TextInput" class="form-label">Instructor</label>
-            <input type="text" id="Instructor" class="form-control">
+            <input type="text" name="Instructor" class="form-control">
         </div>
         <div class="mb-3 col-4 container">
             <label for="TextInput" class="form-label">Precio</label>
-            <input type="text" id="Precio" class="form-control">
+            <input type="text" name="Precio" class="form-control">
         </div>
         <div class="mb-3 col-4 container">
             <label for="Select" class="form-label">Estado</label>
-            <select id="Estado" class="form-select">
+            <select name="Estado" class="form-select">
               <option>Activo</option>
               <option>Cancelado</option>
             </select>
         </div>
         <div class="col-4 container">
             <button type="submit" class="btn btn-dark">Enviar</button>
-            <button type="submit" class="btn btn-dark">Cancelar</button>
+            <button type="reset" class="btn btn-dark" onclick="location.href='gestor_cursos.html'">Cancelar</button>
         </div>
     </form>
+
+    <script src="agregar_cursos.js"></script>
     
 </body>
 </html>

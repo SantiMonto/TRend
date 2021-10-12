@@ -36,7 +36,11 @@
 
 </head>
 <body>
-    <div class="wrapper">
+
+  <script src="https://www.gstatic.com/firebasejs/9.1.1/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.1.1/firebase-firestore-compat.js"></script>
+
+    <div id="content_section" class="wrapper">
 
         <!-- Preloader
         <div class="preloader flex-column justify-content-center align-items-center">
@@ -188,63 +192,29 @@
             <div class="container">
                 <h1>Gestor de Cursos</h1>
 
-                <div class="row justify-content-between">
-                  <div class="col-6">
-                    <input type="text" class="form-control" placeholder="Buscar por palabra clave">
+                <div class="row d-flex align-items-center justify-content-center">
+                  <div class="col-sm-1 align-text-bottom"><h5>Buscar:</h5></div>
+                  <div class="col-sm-5">
+                      <input id="search_curso" type="text" class="form-control" placeholder="Nombre del Curso" onchange="prueba(this)"/>
                   </div>
-                  <div class="col-2">
-                    <button onclick="location.href='/templates/cursos/agregar_cursos.html'" class="btn btn-dark" type="button">
-                      Agregar Curso</button>
-                  </div>
-                </div>
+                  <div class="col"><button onclick="location.href='agregar_cursos.html'" class="btn btn-dark" type="button">Agregar Curso</button></div>
+                </div> 
                 <br>
                 
                 <table class="table table-striped">
-                    <thead class="table-dark">
-                        <tr>
-                            <th>ID</th>
-                            <th>Nombre del curso</th>
-                            <th>Area</th>
-                            <th>Instructor</th>
-                            <th>Precio</th>
-                            <th>Estado</th>
-                            <th>Accion</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <th class="align-middle">1</th>
-                            <td class="align-middle">Introducción a Java</td>
-                            <td class="align-middle">OOP</td>
-                            <td class="align-middle">Liliana</td>
-                            <td class="align-middle">$50.000</td>
-                            <td class="align-middle">
-                                <span class="active_course">Activo</span>
-                            </td>
-                            <td>
-                                <button type="button" class="btn btn-danger"> 
-                                    <i class="fas fa-trash-alt"></i> Eliminar</button>
-                                <button type="button" class="btn btn-primary">
-                                    <i class="fas fa-pencil-alt"></i> Editar</button>
-                            </td>
-                        </tr>
-                        <tr>
-                            <th class="align-middle">2</th>
-                            <td class="align-middle">React Native</td>
-                            <td class="align-middle">Móvil</td>
-                            <td class="align-middle">Carlos Santana</td>
-                            <td class="align-middle">$35.000</td>
-                            <td class="align-middle">
-                                <span class="cancelled_course">Cancelado</span>
-                            </td>
-                            <td>
-                                <button type="button" class="btn btn-danger">
-                                    <i class="fas fa-trash-alt"></i> Eliminar</button>
-                                <button type="button" class="btn btn-primary">
-                                    <i class="fas fa-pencil-alt"></i> Editar</button>
-                            </td>
-                        </tr>
-                    </tbody>
+                  <thead class="table-dark">
+                    <tr>
+                      <th class="text-center">ID</th>
+                      <th class="text-center">Nombre del curso</th>
+                      <th class="text-center">Area</th>
+                      <th class="text-center">Instructor</th>
+                      <th class="text-center">Precio</th>
+                      <th class="text-center">Estado</th>
+                      <th class="text-center">Acción</th>
+                    </tr>
+                  </thead>
+                  <tbody id="table_cursos"></tbody>
+                </table>
                 </table>
             </div>
 
@@ -267,5 +237,8 @@
       </aside>
       <!-- /.control-sidebar -->
     </div> 
+
+    <script src="gestor_cursos.js"></script>
+
 </body>
 </html>
